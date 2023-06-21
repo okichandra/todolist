@@ -1,8 +1,10 @@
 import React from "react"
+import HomePage from "./assets/component/pages/HomePage"
+
 function App() {
     return (
         <>
-            <h1 className="">Tesing</h1>
+        <HomePage />
         </>
     )
 }

@@ -1,11 +1,19 @@
 import React from 'react'
+import Activity from '../image/icon/Activity.svg'
+import Finance from '../image/icon/Finance.svg'
+import HomeIcon from '../image/icon/HomeIcon.svg'
+import { Link } from "react-router-dom";
 
-function navbar() {
+function Navbar() {
     return (
-        <div>
-            <h1>Hello World</h1>
+        <div className='drop-shadow-2xl bg-main-color border bg-fixed p-4 m-0 bottom-0 fixed w-full rounded-t-lg'>
+            <ul className='flex justify-between'>
+                <li><Link to='/activity'><img src={Activity} alt="" /></Link></li>
+                <li><Link to='/'><img src={HomeIcon} alt="" /></Link></li>
+                <li><Link to='/finance'><img src={Finance} alt="" /></Link></li>
+            </ul>
         </div>
     )
 }
 
-export default navbar
+export default Navbar

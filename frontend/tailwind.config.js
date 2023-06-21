@@ -1,8 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}"
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'main-color': '#292929',
+        'second-color': '#3A3A3A',
+        'second-text-color': '#A7A7A7',
+        'text-color': {
+          100: '#313131',
+          900: '#FFF',
+        },
+      }
+    },
   },
   plugins: [],
 }
