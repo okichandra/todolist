@@ -1,8 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import ActivityPage from './assets/component/pages/ActivityPage.jsx'
-import FinancePage from './assets/component/pages/FinancePage.jsx'
-import HomePage from './assets/component/pages/HomePage.jsx'
+import ActivityPage from './assets/component/pages/Activity/ActivityPage.jsx'
+import FinancePage from './assets/component/pages/Finance/FinancePage.jsx'
 import App from './App.jsx'
 
 import {
@@ -13,15 +12,15 @@ import {
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App/>,
+        element: <App />,
     },
     {
         path: "activity",
-        element: <ActivityPage/>,
+        element: <ActivityPage />,
     },
     {
         path: "finance",
-        element: <FinancePage/>,
+        element: <FinancePage />,
     },
 ]);
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import MainLayout from '../layout/MainLayout.jsx'
+import MainLayout from '../../layout/MainLayout.jsx'
 
 function ActivityPage() {
     return (
