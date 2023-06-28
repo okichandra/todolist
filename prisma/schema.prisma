@@ -6,6 +6,76 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model User {
+  id             Int              @id @default(autoincrement())
+  uuid           String           @unique
+  name           String
+  username       String           @unique
+  password       String
+  email          String           @unique
+  img_name       String
+  img_url        String
+  created_at     DateTime
+  updated_at     DateTime
+  userBalance    userBalance[]
+  historyBalance historyBalance[]
+  todoUser       todoUser[]
+}
+
+model userBalance {
+  id         Int      @id @default(autoincrement())
+  uuid       String   @unique
+  balance    String
+  user       User     @relation(fields: [user_id], references: [id])
+  user_id    Int
+  created_at DateTime
+  updated_at DateTime
+}
+
+model historyBalance {
+  id             Int      @id @default(autoincrement())
+  uuid           String   @unique
+  user           User     @relation(fields: [user_id], references: [id])
+  user_id        Int
+  category       Category @relation(fields: [category_id], references: [id])
+  category_id    Int
+  detail_history String
+  created_at     DateTime
+  updated_at     DateTime
+}
+
+model Category {
+  id             Int              @id @default(autoincrement())
+  uuid           String           @unique
+  category_name  String
+  created_at     DateTime
+  updated_at     DateTime
+  historyBalance historyBalance[]
+}
+
+model todoUser {
+  id          Int          @id @default(autoincrement())
+  uuid        String       @unique
+  user        User         @relation(fields: [user_id], references: [id])
+  user_id     Int
+  head_todo   String
+  desc_todo   String
+  todo_target DateTime
+  category    todoCategory @relation(fields: [category_id], references: [id])
+  category_id Int
+  created_at  DateTime
+  updated_at  DateTime
+}
+
+model todoCategory {
+  id            Int        @id @default(autoincrement())
+  uuid          String     @unique
+  category_name String
+  created_at    DateTime
+  updated_at    DateTime
+  todoUser      todoUser[]
 }
