@@ -35,8 +35,6 @@ const LineGraph = ({ data }) => {
             menit: hasilPengurangan % 60
         })
     }
-    // console.log(PembagianHarga)
-    // console.log(PembagianJam)
 
     const ref = useRef(null);
 
@@ -78,10 +76,6 @@ const LineGraph = ({ data }) => {
             })
             return l
         }
-
-        console.log(height);
-        console.log(getPixels[0].pixelHarga)
-
         return `${findM} ${makeL()}`
     }
     const vertical = (ell) => {
