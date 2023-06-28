@@ -4,6 +4,7 @@ import HomeProfile from './HomeProfile.jsx'
 import MainHomePage from './MainHomePage.jsx'
 import ShortTimeData from '../../../../../../ShortTimeData.js'
 
+
 function HomePage() {
 
     const homeProfileData = {
