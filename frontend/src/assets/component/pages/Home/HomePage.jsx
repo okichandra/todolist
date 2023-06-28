@@ -2,7 +2,8 @@ import React from 'react'
 import MainLayout from '../../layout/MainLayout.jsx'
 import HomeProfile from './HomeProfile.jsx'
 import MainHomePage from './MainHomePage.jsx'
-import ShortTimeData from '../../../../../../backend/shortTimeData.js'
+import ShortTimeData from '../../../../../../ShortTimeData.js'
+
 
 function HomePage() {
 

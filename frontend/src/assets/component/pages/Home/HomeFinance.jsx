@@ -1,6 +1,6 @@
 import React from 'react'
 import LineGraph from './LineGraph'
-import FormatNumber from '../../FastConverter/FormatNumber'
+import FormatNumber from '../../GlobalFunction/FormatNumber'
 
 function HomeFinance({ homeData }) {
 
@@ -50,8 +50,6 @@ function HomeFinance({ homeData }) {
     let dataHarga = []
     data.forEach(ell => dataHarga.push(ell.harga))
     let totalLoss = dataHarga.reduce((a, b) => { return a + b }, 0)
-    console.log(totalLoss)
-
     return (
         <div className='pt-4'>
             <span className='capitalize text-text-color-900 text-sm'>my balance</span>
