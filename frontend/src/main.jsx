@@ -8,8 +8,15 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
+import Login from './assets/component/pages/SignPage/Login.jsx'
+import Register from './assets/component/pages/SignPage/Register.jsx'
+import SignLayout from './assets/component/layout/SignLayout.jsx'
 
 const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <SignLayout />,
+    },
     {
         path: "home",
         element: <App />,
@@ -21,6 +28,14 @@ const router = createBrowserRouter([
     {
         path: "finance",
         element: <FinancePage />,
+    },
+    {
+        path: "login",
+        element: <Login />,
+    },
+    {
+        path: "register",
+        element: <Register />,
     },
 ]);
 
