@@ -23,9 +23,9 @@ let ShortTimeData = {
                     },
                 },
                 {
-                    taskName: 'joging',
-                    description: 'Running in morning for healthy',
-                    category: 'Sports',
+                    taskName: 'Bioskop',
+                    description: 'Refreshing nonton transformers',
+                    category: 'Life',
                     dueDate: {
                         day: 'Saturday',
                         date: '21',
@@ -38,9 +38,9 @@ let ShortTimeData = {
                     },
                 },
                 {
-                    taskName: 'joging',
-                    description: 'Running in morning for healthy',
-                    category: 'Sports',
+                    taskName: 'Datang ke seminar',
+                    description: 'datang untuk menambah ilmu saya',
+                    category: 'Study',
                     dueDate: {
                         day: 'Saturday',
                         date: '21',
@@ -53,9 +53,9 @@ let ShortTimeData = {
                     },
                 },
                 {
-                    taskName: 'joging',
-                    description: 'Running in morning for healthy',
-                    category: 'Sports',
+                    taskName: 'Portofolio',
+                    description: 'Buat web portofolio untuk lamar',
+                    category: 'Web dev',
                     dueDate: {
                         day: 'Saturday',
                         date: '21',
