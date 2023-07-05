@@ -1,6 +1,4 @@
 import React from 'react'
-import Toggle from '../pages/SignPage/Toggle'
-
 function SignLayout({ children, signData }) {
     return (
         <div className='bg-main-color flex min-h-screen justify-center'>

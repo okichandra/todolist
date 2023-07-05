@@ -46,6 +46,38 @@ function HomeFinance({ homeData }) {
             Jam: 21,
         },
     ]
+
+    let weeklyData = [
+        {
+            day: "Sun",
+            expense: 50000,
+        },
+        {
+            day: "Mon",
+            expense: 28000,
+        },
+        {
+            day: "Tue",
+            expense: 134000,
+        },
+        {
+            day: "Wed",
+            expense: 72000,
+        },
+        {
+            day: "Thu",
+            expense: 63000,
+        },
+        {
+            day: "Fri",
+            expense: 280000,
+        },
+        {
+            day: "Sat",
+            expense: 24600,
+        },
+    ]
+
     let sorted = data.sort((a, b) => a.Jam - b.Jam)
     let dataHarga = []
     data.forEach(ell => dataHarga.push(ell.harga))
@@ -54,7 +86,7 @@ function HomeFinance({ homeData }) {
         <div className='pt-4'>
             <span className='capitalize text-text-color-900 text-sm'>my balance</span>
             <h1 className='drop-shadow-lg text-text-color-900 text-4xl font-bold'>Rp {FormatNumber(homeData.balance)}</h1>
-            <LineGraph data={sorted} />
+            <LineGraph data={sorted} weekly={weeklyData} />
             <div className="loss bg-semi-transparent mt-4 rounded-lg p-2 capitalize text-xs tracking-wider text-text-color-900 font-thin">
                 <span className='block'>total loss</span>
                 <h1 className='text-xl font-bold'>Rp {FormatNumber(totalLoss)}</h1>

@@ -14,7 +14,7 @@ function Toggle({ info }) {
                     register
                 </Link>
             </span>
-            <div id='animate' className={`animate duration-300 bg-main-color w-1/2 h-5/6 rounded-lg top-1/2 -translate-y-1/2 absolute ${info}`}></div>
+            <div id='animate' className={`animate ease-in duration-300 bg-main-color w-1/2 h-5/6 rounded-lg top-1/2 -translate-y-1/2 absolute ${info}`}></div>
         </div>
     )
 }
